@@ -1,0 +1,95 @@
+/* styles for landing page components */
+
+.backdrop {
+  height: 100vh;
+  background-image: url("./landing-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(40%);
+}
+
+.contentContainer {
+  position: absolute;
+  padding: 10px 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+}
+
+.langSelectContainer {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  width: 95px;
+}
+
+.langSelect {
+  background-color: transparent;
+  color: #fff;
+  padding: 6px 0px 6px 18px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 100;
+  width: 100%;
+
+  appearance: none;
+}
+
+.customSelectArrow {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  height: 0.8rem;
+  width: 0.8rem;
+  height: 100%;
+  pointer-events: none;
+}
+
+.customSelectArrow::before,
+.customSelectArrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.customSelectArrow::before {
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  border-top: 0.4em solid #fff;
+}
+
+.signInBtn {
+  background-color: #e63e33;
+  color: #fff;
+  padding: 6px 14px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+/* For above 600px styles */
+@media screen and (min-width: 600px) {
+  .contentContainer {
+    padding: 20px 40px;
+  }
+  .logo {
+    height: 40px;
+  }
+  .langSelectContainer {
+    margin-right: 28px;
+  }
+}
